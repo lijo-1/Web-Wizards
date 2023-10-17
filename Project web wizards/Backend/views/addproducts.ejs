@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Admin Panel</title>
+</head>
+<body class="bg-green-50 text-green-900">
+
+    <!-- Header -->
+    <header class="bg-green-700 text-white p-4 text-center">
+        <h1 class="text-2xl font-semibold">Admin Panel</h1>
+    </header>
+    
+    <section class="m-3 flex flex-row gap-4">
+        <button class="bg-green-700 text-white p-3 rounded-lg">Orders</button>
+        <button class="bg-green-700 text-white p-3  rounded-lg">Add Products</button>
+        <button class="bg-green-700 text-white p-3  rounded-lg">Update Products</button>
+         
+        <input type="text" placeholder="Product ID" class="px-3 bg-gray-200 text-gray-700 border rounded py-2 focus:outline-none focus:bg-white">
+        <button class="bg-green-700 text-white p-3 rounded-lg">Search</button>
+    </section>
+
+    <!-- Add Product Form -->
+    <section class="m-3">
+        <div class="container mx-auto px-4 md:px-12">
+            <form class="w-full max-w-lg" enctype="multipart/form-data" action="/admin/addproduct" method="POST">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="product-name">
+                            Product Name
+                        </label>
+                        <input class="appearance-none block w-full bg-green-100 text-gray-800 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="product_name" type="text" placeholder="Enter product name">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="product-cost">
+                            Product Cost
+                        </label>
+                        <input class="appearance-none block w-full bg-green-100 text-gray-800 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="product_cost" type="text" placeholder="Enter product cost" name="product_cost>
+                    </div>
+                </div>
+                <div class="w-full mb-6">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="product-description">
+                        Product Description
+                    </label>
+                    <textarea class="appearance-none block w-full bg-green-100 text-gray-800 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="product_description" placeholder="Enter product description"></textarea>
+                </div>
+                <div class="w-full mb-6">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="product-images">
+                        Product Images
+                    </label>
+                    <input class="appearance-none block w-full bg-green-100 text-gray-800 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="product_images" type="file" name="images" accept="image/*" multiple>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button class="bg-green-700 text-white py-3 px-6 rounded-lg" type="submit">
+                        Add Product
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Existing Product Section -->
+    <section>
+        <!-- Existing product section code... -->
+    </section>
+
+</body>
+</html>

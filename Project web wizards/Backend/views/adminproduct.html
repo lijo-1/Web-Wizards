@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Admin Panel</title>
+</head>
+<body class="bg-green-50 text-green-900">
+
+    <!-- Header -->
+    <header class="bg-green-700 text-white p-3 text-center">
+        <h1 class="text-2xl font-semibold">Admin Panel</h1>
+    </header>
+    
+    <section class="m-3 flex flex-row gap-4">
+        <button class="bg-green-700 text-white p-3 rounded-lg">Orders</button>
+        <button class="bg-green-700 text-white p-3  rounded-lg">Add Products</button>
+        <button class="bg-green-700 text-white p-3  rounded-lg">Update Products</button>
+         
+        <input type="text" placeholder="Product ID" class="px-3 bg-white text-gray-800 border rounded py-2 focus:outline-none">
+        <button class="bg-green-700 text-white p-3 rounded-lg">Search</button>
+    </section>
+
+    <section>
+        <div class="container my-12 mx-auto px-4 md:px-12">
+            <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        
+                <!-- Column -->
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a class="no-underline hover:underline text-green-700" href="#">
+                                    Product Name :
+                                </a>
+                            </h1>
+                            <p class="text-green-700 text-sm">
+                                Product Price: 
+                            </p>
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline hover:underline text-green-700" href="#">
+                                <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
+                                <p class="ml-2 text-sm text-green-700">
+                                    Product Id: <button class="bg-green-700 text-white p-1 rounded-lg">Delete</button>
+                                </p>
+                            </a>
+                            <a class="no-underline text-green-700 hover:text-red-700" href="#">
+                                <span class="hidden">Like</span>
+                                <i class="fa fa-heart"></i>
+                            </a>
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <!-- END Column -->
+        
+                <!-- Add more columns and articles as needed -->
+        
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
